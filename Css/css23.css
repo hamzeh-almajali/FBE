@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+background-color:aquamarine;
+
+}
+.container{
+border-radius: 15px;    
+ height: 400px;   
+ width: 80%;
+background-color: white;
+margin: 10% auto;
+display: flex;
+justify-content: space-around;
+flex-direction: column;
+}
+h2{
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin:7px auto;
+    width: 70%;
+}
+input{
+    
+    margin-top: 13px;
+    height: 30px;
+}
+
+#sign{
+margin:5px auto;
+width: 50%;
+background-color: aquamarine;
+border: none;
+border-radius: 5px;
+
+}
+
+.link{
+
+    text-align: center;
+}

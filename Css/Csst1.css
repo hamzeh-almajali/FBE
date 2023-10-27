@@ -1,0 +1,48 @@
+*{
+box-sizing: border-box;
+padding: 0;
+
+
+}
+.container{
+width: 60%;
+display: flex;
+justify-content: center;
+align-content: center;
+margin: auto;
+flex-direction: column;
+
+}
+.title{
+text-align: center;
+border-bottom: 1px solid black;
+
+}
+.table{
+    margin-top: 10px;
+    width: 100%;
+}
+table{
+    width: 100%;
+}
+table , td{
+
+border: 1px solid black;
+
+}
+thead{
+
+    background-color: yellow;
+    text-align: end;
+}
+.col1{
+background-color: hotpink;
+text-align: center;
+
+}
+.tfoot{
+
+text-align: center;
+font-weight: bold;
+
+}

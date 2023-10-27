@@ -1,0 +1,43 @@
+*{
+
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+}
+body{
+    background-color: blueviolet;
+}
+.container{
+border-radius: 20px;
+background-color: aliceblue;
+width: 80%;
+display: flex;
+margin:30px auto;
+height: 80%;
+justify-content: space-around;
+}
+.img{
+    width: 50%;
+}
+.form{
+width: 50%;
+display: flex;
+flex-direction: column;
+margin: auto;
+}
+input{
+margin: 10px;
+border-radius: 10px;
+}
+p{
+
+    margin: 10px;
+}
+@media (max-width:500px) {
+    .container{
+        flex-direction: column;
+    }
+
+    
+}

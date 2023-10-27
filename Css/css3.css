@@ -1,0 +1,44 @@
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+.container{
+    
+    color: aliceblue;
+background-color: rgb(149, 108, 186);
+    width: 80%; 
+margin:30px auto;
+box-shadow: 0 0 20px 5px blueviolet;
+border-radius: 10px;
+}
+form{
+display: flex;
+flex-direction: column;
+width: 80%;
+justify-content: center;
+align-content: center;
+margin: auto;
+}
+h1{
+    text-align: center;
+}
+.name input{
+width: 47%;
+}
+input{
+    border-radius: 3px;
+    padding: 5px;
+    height: 30px;
+    margin: 6px;
+}
+p{
+    text-align: center;
+    margin: 10px;
+}
+.check {
+display: flex;
+align-items: center;
+}
