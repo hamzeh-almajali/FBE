@@ -1,0 +1,31 @@
+*{
+
+    box-sizing: border-box;
+
+}
+body{
+    background-color: blueviolet;
+}
+.content{
+margin: 10vh 0 2vh;    
+display: flex;
+width: 100%;
+}
+.art{
+margin-left: 10px;    
+background-color: aliceblue;
+width: 25vw;
+height: 15vh;
+overflow: hidden;
+}
+.mid p{
+height: 5vh;    
+border-top: 2px solid;
+border-bottom: 2px solid;
+overflow: scroll;
+
+}
+.m2{
+margin-top: 2vh;
+
+}

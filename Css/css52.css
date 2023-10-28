@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background-color: blanchedalmond;
+}
+.content{
+background-color: aliceblue;
+border: 1px solid black;
+width: 80vw;
+margin:5vw 5vw;
+padding: 10px;
+}
+.content h2{
+margin: 1%;
+}
+.col{
+
+    color: red;
+}

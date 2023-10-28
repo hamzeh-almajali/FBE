@@ -1,0 +1,40 @@
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    
+border-radius: 5px;
+width: 60%;
+background-color: rgb(11, 87, 129);
+margin:15vh auto;
+color: aliceblue;
+height: 50vh;
+display: flex;
+justify-content: center;
+align-items:center ;
+flex-wrap: wrap;
+}
+form{
+display: flex;
+flex-direction: column;
+width: 80%;
+}
+input{
+
+    padding: 5px;
+    margin:5px 0;
+    border-radius: 5px;
+    border: none;
+}
+textarea{
+    border-radius: 5px;
+}
+.submit{
+
+    width: 20%;
+    background-color: blue;
+    color: aliceblue;
+}
