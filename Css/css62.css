@@ -1,0 +1,32 @@
+.con{
+    display: flex;
+    flex-wrap: wrap;
+}
+.o{
+width: 24vw;
+text-align: center;
+}
+.c1{
+    background-color: aquamarine;
+}
+.c2{
+    background-color: aqua;
+}
+.c3{
+    background-color: blueviolet;
+}
+.c4{
+    background-color: blue;
+}
+.c5{
+    background-color: yellow;
+}
+.c6{
+    background-color: orange;
+}
+.c7{
+    background-color: aquamarine;
+}
+.c8{background-color: tomato;}
+.c9{background-color: gold;}
+.c10{background-color: green;}

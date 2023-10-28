@@ -1,0 +1,21 @@
+.one{
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 100vh;
+    color: aliceblue;
+}
+.two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 100vh;
+    background-color: blue;
+    color: aliceblue;
+}
+.con{
+    display: flex;
+}
