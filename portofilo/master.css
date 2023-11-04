@@ -10,11 +10,12 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 /* position: relative; */
 color: aliceblue;
 background-image: linear-gradient(to bottom,black,rgb(62, 53, 53));
-width: 100vw;
+width: 100%;
 height: 100%;
 }
 .header .nav{
-position: sticky;
+margin: auto;
+width: 70%;
 height: 30px;
 display: flex;
 justify-content: space-between;
@@ -100,21 +101,20 @@ padding: 10px;
 
 .about{
     background-image: linear-gradient(to top,black,rgb(62, 53, 53));
-height: 90vh;
+height: 65vh;
 width: 100%;
 }
-.about .heading{
+/* .about .heading{
 
-background-color: #512B81;
 text-align: center;
 color:aliceblue;
 font-style: italic;
-}
+} */
 .about .content{
 display: flex;
 width: 90%;
-margin: 10px auto;
-height: 80%;
+margin: auto;
+height: 100%;
 
 }
 .about .content .img img {
@@ -141,77 +141,82 @@ height: 80%;
 .edu{
     width: 100%;
     margin: auto;
-    height: 90vh;
+    height: 50vh;
     background-image: linear-gradient(to top,black,rgb(62, 53, 53));
     color: aliceblue;
 
 }
 .edu .heading{
     text-align: center;
-    background-color: #512B81;
 }
 .edu .content{
-    display: flex;
+    /* display: flex; */
     width: 90%;
     margin: auto;
     height: 90%;
-    justify-content: space-between;
-}
-.edu .content .img{
-    margin: 10px 5px 0 5px;
-    padding: 20px;
-    width: 50%;
-    height: 90%;
-    background-image: url(education.avif);
-    background-size: contain;
-    background-repeat: no-repeat;
-   
-    border-radius: 5px;
-
+    justify-content: center;
+    text-align: center;
 
 }
-.edu .content .lists{
-position: relative;
-    display: flex;
-    width: 50%;
-    justify-content: space-between;
-    /* background-color: aliceblue; */
+.edu .content .icons{
+color: orange;
+font-size: 20px;
+
+display: flex;
+gap: 1em;
+border-radius: 5px;
+flex-wrap: wrap;
+justify-content: center;
+}
+.edu .content .icons i{
+background-color: aliceblue;
+height: fit-content;
+border-radius: 3px;
+padding: 10px;
+margin-top: 8%;
+}
+
+
+/* education  */
+
+.education{
+
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    background-image: linear-gradient(to top,black,rgb(62, 53, 53));
+    color: aliceblue;
+} 
+.education .heading {
+
+    text-align: center;
+}
+.education .content {
+display: flex;
+color: #000000;
+text-align: center;
+padding: 10px;
+width: 100%;
+height: 80%;
+gap: 10px;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+.education .content .card{
+width: 25%;
+    background-color: #f1ecec;
     border-radius: 5px;
+    height: fit-content;
+    padding: 10px;
+
     
 }
-.edu .content .lists ul{
-list-style: none;
-padding: 5px;
-margin-top: 10%;
+.education .content .card img{
 
-}
-.edu .content .lists ul span{
-
-font-size: 20px;
-font-style: italic;
-/* background-color:#0d6efd; */
-border-radius: 3px;
-padding: 5px;
-}
-.edu .content .lists ul li{
-display: none;
-border-bottom:1px solid #000000;
-background-color: aliceblue;
-padding: 3px;
-color: #000000;
-border-radius: 3px;
-margin-top: 5px;
-transition: .3s;
-
+    width: 100%;
+    height: 80%;
 }
 
-.edu .content .lists ul:hover li{
-display: block;
-
-}
-.edu .content .lists ul li:hover {
-padding-left: 10px;
-}
 /* project styling */
 .project{
 width: 100%;
@@ -221,12 +226,14 @@ background-image: linear-gradient(to top,black,rgb(62, 53, 53));
 }
 .project .heading{
 text-align: center;
-background-color: #512B81;
+
 color: aliceblue;
 
 }
 .project .content{
-    height: 90vh;
+    height: 100%;
+display: flex;
+justify-content: center;
 }
 .project .content .card {
     transition: .3s;
@@ -247,7 +254,7 @@ width: 100%;
     width: 30%;
     margin:10px 5%;
     padding: 5px;
-    height: 45%;
+    height: 40%;
     
     background-color: aliceblue;
     border-radius:3px ;
@@ -256,44 +263,8 @@ width: 100%;
 text-align: center;
 
 }
-/* contact me */
-.contact{
-background-image: linear-gradient(to top,black,rgb(62, 53, 53));
 
 
-}
-.contact .heading{
-
-    text-align: center;
-    text-shadow: 1px 1px rgb(70, 70, 90);
-    color: #cecccc;
-    background-color: #512B81;
-}
-.contact .card{
-border-radius: 3px;    
-width: 70%;
-text-align: center;
-border: 1px solid #FFF0CE;
-margin: auto;
-background-color: #84929b;
-margin-top: 10px;
-
-}
-.contact .card form{
-    width: 50%;
-    margin: auto;
-}
-.contact .card form input,textarea{
-    display: block;
-    margin:10px 0;
-    width: 100%;
-    border: none;
-    padding: 3px;
-    border-radius: 3px;
-}
-.contact .card form .form-btn{
-    background-color:#FFF0CE;
-}
 .footer {
     color: aliceblue;
     text-align: center;
@@ -329,6 +300,7 @@ margin:30px 10px;
         top: 2%;
         right: 2%; 
         display: block;
+        width: 100%;
         
     }
     .header .nav:hover ul,li{
@@ -352,13 +324,13 @@ margin:30px 10px;
         width: 80vw;
     }
     .me .p1{
-        margin-bottom: 10px;
         display: block;
         width: 100%;
         height: 55%;
     }
     .me .img{
         justify-content: center;
+        display: none;
     }
     .me .img img{
         height:100% ;
@@ -392,5 +364,18 @@ margin:30px 10px;
     .edu .content .lists ul{
 
         margin-top: 5px;
+    }
+    .education .content {
+        display: block;
+    }
+    .education .content .card{
+        width: 95%;
+        margin-bottom:10px;
+    }
+    .project .content{
+        flex-direction: column;
+    }
+    .project .content .card{
+        width: 90%;
     }
 }
