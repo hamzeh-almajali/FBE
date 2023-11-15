@@ -69,50 +69,58 @@
 // console.log(multiply2(4,4));
 // task 5
 
-// function triarea(x,y){
-// return 2*(x*y);
-// }
-// console.log(triarea(5,5));
-// task 6
-// let n =Number(prompt("enter a number"));
-// let nstr=n.toString();
-// let arr=nstr.split("");
-// let set1 = new Set(arr);
-// if(set1.size===10){
-//     document.write("true");
-// }
-// else{
-//     document.write("false");
-// }
-// let hh= new set(arr);
-// if(hh.size==10){
-// console.log("true");
+function triarea(x,y){
+return 2*(x*y);
+}
+console.log(triarea(5,5));
+let n =Number(prompt("enter a number"));
+let nstr=n.toString();
+let arr=nstr.split("");
+let set1 = new Set(arr);
+if(set1.size===10){
+    document.write("true");
+}
+else{
+    document.write("false");
+}
+let hh= new set(arr);
+if(hh.size==10){
+console.log("true");
 
-// }
-// else{
-//     console.log("false");
-// }
-
-
-// task 7
-// let user=prompt("enter your fav drink");
-// let price=0;
-// switch(user){
-//     case 'tea':
-//         price=20;
-//         break;
-//     case 'coffie':
-//         price=30;
-//     case 'orange':
-//         price=40;        
+}
+else{
+    console.log("false");
+}
 
 
-// }
-// console.log(`the price of your drink (${user}) is ${price} `);
-// task 8
-// function fullName(x,y){
-// return x+' '+y;
+
+let user=prompt("enter your fav drink");
+let price=0;
+switch(user){
+    case 'tea':
+        price=20;
+        break;
+    case 'coffie':
+        price=30;
+    case 'orange':
+        price=40;        
 
 
-// }
-// console.log(fullName('hamzeh','almajali'));
+}
+console.log(`the price of your drink (${user}) is ${price} `);
+
+function fullName(x,y){
+return x+' '+y;
+
+
+}
+console.log(fullName('hamzeh','almajali'));
+// let arr = [1,2,3,4,5,6];
+// function check(w){
+//         return w>3;
+//     }
+//     console.log(arr.find(check));
+    
+    
+// console.log(arr.splice(2,2,5,6,7));
+// console.log(arr);

@@ -10,11 +10,11 @@ Ex: tellFortune('software engineer', 'Jordan', 'Alice', 3);
 => "You will be a software engineer in Jordan, and married to Alice with 3 kids."
 */
 // ************solution******** 
-// function tellFortune(x,y,z,n){
-//   document.write(`you will be a ${x} in ${y}, and married  ${z} with  ${n}`)
+function tellFortune(x,y,z,n){
+  document.write(`you will be a ${x} in ${y}, and married  ${z} with  ${n}`)
 
 
-// }
+}
 
 /*
 2
@@ -496,6 +496,9 @@ function counter(){
   return e++;
 }
 
+function resetCounter(){
+return  e=0; 
+}
 /*
 24
 Write a function called resetCounter
@@ -527,7 +530,3 @@ Ex: resetCounter()
 Ex: counter()
 => 1
 */
-
-function resetCounter(){
-return  e=0; 
-}
