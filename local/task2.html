@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    color: #333;
+    margin-top: 10px;
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #0099cc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0077b3;
+}
+    </style>
+</head>
+
+<body>
+    <h1>Personal Data Form</h1>
+    <form action="">
+        <label for="Subject">Subject:</label>
+        <input type="text" id="Subject" name="Subject" required>
+    
+        <label for="Description">Description:</label>
+        <input type="text" id="Description" name="Description" min="1" required>
+    
+        <label for="UserTypes">UserTypes:</label>
+        <input type="text" id="UserTypes" name="UserTypes" required>
+    
+        <label for="TechnologyUsed">Technology Used:</label>
+        <input type="text" id="TechnologyUsed" name="TechnologyUsed" required>
+
+        <input type="submit" id="submit">
+    </form>
+
+
+    <div class="card">
+        <div class="card-content">
+            <h1>Welcome!</h1>
+            <p><strong>Subject:</strong> <span id="aSubject"></span></p>
+            <p><strong>Description:</strong> <span id="aDescription"></span></p>
+            <p><strong>User Types:</strong> <span id="aUserTypes"></span></p>
+            <p><strong>Technology Used:</strong> <span id="aTechnologyUsed"></span></p>
+        </div>
+    </div>
+    
+    <script>
+var submit = document.getElementById('submit');
+var SubjectInput = document.getElementById('Subject');
+var DescriptionInput = document.getElementById('Description');
+var UserTypesInput = document.getElementById('UserTypes');
+var TechnologyUsedInput = document.getElementById('TechnologyUsed');
+
+submit.addEventListener('click', save);
+
+function save(event) {
+
+    var Subject = SubjectInput.value;
+    var Description = DescriptionInput.value;
+    var UserTypes = UserTypesInput.value;
+    var TechnologyUsed = TechnologyUsedInput.value;
+
+    sessionStorage.setItem("Subjectkey", Subject);
+    sessionStorage.setItem("Descriptionkey", Description);
+    sessionStorage.setItem("UserTypeskey", UserTypes);
+    sessionStorage.setItem("TechnologyUsedkey", TechnologyUsed);
+
+}
+
+var Subjectname = sessionStorage.getItem("Subjectkey");
+var Description = sessionStorage.getItem("Descriptionkey");
+var UserTypes = sessionStorage.getItem("UserTypeskey");
+var TechnologyUsed = sessionStorage.getItem("TechnologyUsedkey");
+
+document.getElementById("aSubject").innerText = Subjectname;
+document.getElementById("aDescription").innerText = Description;
+document.getElementById("aUserTypes").innerText = UserTypes;
+document.getElementById("aTechnologyUsed").innerText = TechnologyUsed;
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+    <style>
+        table td{
+            border-bottom: 1px solid gray;
+            margin: 5px;
+            padding: 4px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <button class="show-table">Show table</button>
+    
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>email</th>
+            <th>age</th>
+        </tr>
+    </table>
+    <script >
+     var showTable = document.querySelector('.show-table');
+
+table = document.querySelector('table');
+
+showTable.addEventListener('click', function(){
+  table.style.display = 'block';
+});
+showTable.addEventListener('dblclick', function(){
+  table.style.display = 'none';
+});
+
+fetch('message.json').then((data) =>{
+    return data.json();
+}).then((data)=>{
+    data.users.forEach((item)=>{
+    var tr = document.createElement('tr');
+    var td1 = document.createElement('td');
+    var td2 = document.createElement('td');
+    var td3 = document.createElement('td');
+    var td4=document.createElement('td');
+
+    td1.innerHTML = item.firstName;
+    td2.innerHTML = item.phone;
+    td3.innerHTML = item.email;
+    td4.innerHTML=item.hair.color;
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    tr.appendChild(td4);
+    table.appendChild(tr);
+
+});
+})
+    </script>
+</body>
+</html>

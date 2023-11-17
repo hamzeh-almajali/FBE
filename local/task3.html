@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration and Login</title>
+    <style>
+        body {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+            justify-content: space-around;
+            background-color: #344d68;
+        }
+
+        .form-container {
+            width: 300px;
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        h2 {
+            text-align: center;
+        }
+        input{
+            outline: none;
+            border: none;
+            display: block;
+            padding: 5px;
+            
+            border-bottom:1px solid black ;
+        }
+        button{
+            margin-top: 3px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>User Registration</h2>
+
+        <form id="registrationForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="button" onclick="reg()">Register</button>
+        </form>
+    </div>
+
+    <div class="form-container">
+        <h2>User Login</h2>
+
+        <form id="loginForm">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" required>
+
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" required>
+
+            <button type="button" onclick="log()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function reg() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            var existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+            var isUserExists = existingUsers.some(function(user) {
+                return user.email === email;
+            });
+
+            if (isUserExists) {
+                alert("User with this email already exists. Please use a different email.");
+            } else {
+             
+                var newUser = {
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                    password: password
+                };
+
+              
+                existingUsers.push(newUser);
+
+              
+                localStorage.setItem("users", JSON.stringify(existingUsers));
+
+                alert("Registration successful! You can now login.");
+            }
+        }
+
+        function log() {
+            var loginEmail = document.getElementById("loginEmail").value;
+            var loginPassword = document.getElementById("loginPassword").value;
+
+          
+            var existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+          
+            var matchedUser = existingUsers.find(function(user) {
+                return user.email === loginEmail;
+            });
+
+         
+            if (matchedUser && matchedUser.password === loginPassword) {
+                alert("Login successful! Welcome, " + matchedUser.firstName + " " + matchedUser.lastName + "!");
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
+        }
+    </script>
+
+</body>
+</html>

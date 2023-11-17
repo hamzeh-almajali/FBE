@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+<style>
+    body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    
+}
+form{
+    border: 1px solid gray;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.button{
+    background-color: rgb(44, 44, 99);
+    border-radius: 4px;
+    color: aliceblue;
+    font-size: larger;
+}
+table {
+    margin-top: 80px;
+    width: 70%;
+    
+}
+td,
+th {
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+    border-collapse: collapse;
+}
+span{
+    padding: 15px;
+}
+</style>
+</head>
+
+<body>
+    <form id="myForm">
+        <input type="text" id="name" placeholder="FullName">
+        <input type="email" id="email" placeholder="E-mail">
+        <input type="text" id="phone" placeholder="Phone Number">
+        <input type="submit" value="Print" id="clickme" class="button">
+    </form>
+    
+    <div><span id="showname"></span> <span id="showemail"></span> <span id="shownumber"></span></div>
+    <table id="myTable">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+        </tr>
+    </table>
+    
+    <form>
+    <script>
+    var form = document.getElementById('myForm');
+var table = document.getElementById('myTable');
+
+document.getElementById('clickme').addEventListener('click', function(e){
+    e.preventDefault();
+
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var mobile = document.getElementById('phone').value;
+
+    var showname = document.getElementById('showname');
+    var showemail = document.getElementById('showemail');
+    var shownumber = document.getElementById('shownumber');
+
+    showname.textContent = name;
+    showemail.textContent = email;
+    shownumber.textContent = mobile;
+
+    var tr = document.createElement('tr');
+    var td1 = document.createElement('td');
+    var td2 = document.createElement('td');
+    var td3 = document.createElement('td');
+
+    td1.innerHTML = name;
+    td2.innerHTML = email;
+    td3.innerHTML = mobile;
+
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    table.appendChild(tr);
+    
+    form.reset();
+})
+    </script>
+</body>
+</html>

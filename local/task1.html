@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .container{
+        width: 70%;
+        margin: auto;
+        border: 2px solid black;
+
+      }
+      form{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+
+      }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <form action="">
+        <label for="name">name:</label>
+        <input type="text" name="name" id="name">
+        <label for="age">age:</label>
+        <input type="text" name="age" id="age">
+        <label for="gender">male</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="gender">female</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="Major"></label>
+        <input type="text" name="Major" id="major">
+        <label for="brief">description</label>
+        <input type="text" name="brief" id="brief">
+        <label for="lang"></label>
+        <label for="lang">JS</label>
+        <input type="checkbox" name="lang" id="Js" value="Javascript">
+        <label for="lang">python</label>
+        <input type="checkbox" name="lang" id="py" value="python">
+       <label for="lang">C++</label>
+        <input type="checkbox" name="lang" id="cpp" value="c++">
+        <input type="submit" name="submit" onclick="def(event)">
+    </form>
+
+<div id="div"></div>
+</div>
+<script>
+     
+    function def(){
+    event.preventDefault();  
+    var name=document.getElementById("name").value;
+    var age =document.getElementById("age").value;
+    var gender=document.querySelectorAll("input[name='gender']:checked");
+    var major=document.getElementById("major").value;
+    var description=document.getElementById("brief").value;
+    var js=document.getElementById("Js");
+    var python=document.getElementById("py");
+    var cpp=document.getElementById("cpp");
+    let gen =0;
+    let lang=[];
+    for(let i =0;i<gender.length;i++){
+      if(gender[i].checked){
+         gen = gender[i].value;
+         
+      }
+    }
+   if(js.checked){
+    lang.push(js.value);
+   }
+   if(python.checked){
+    lang.push(python.value);
+   }
+   if(cpp.checked){
+    lang.push(cpp.value);
+   }
+   function set(){
+       localStorage.setItem("name",name);
+       localStorage.setItem("age",age);
+       localStorage.setItem("major",major);
+       localStorage.setItem("desc",description);
+       localStorage.setItem("gender",gen);
+       localStorage.setItem("language",lang); 
+       
+}
+   set();
+    }
+    if(localStorage.length>0){
+      let div=document.getElementById('div');
+      let text=`
+      <h1>my name is ${localStorage.getItem("name")} </h1>
+      <p>my age is ${localStorage.getItem("age")} </p>
+      <p>my major is ${localStorage.getItem("major")} </p>
+      <p>brief about me ${localStorage.getItem("desc")} </p>
+      <p>my gender is ${localStorage.getItem("gender")} </p>
+      <p>i know this language ${localStorage.getItem("language")} </p>
+      
+      
+      `;
+      div.innerHTML=text;
+
+    }
+
+</script>
+</body>
+</html>
